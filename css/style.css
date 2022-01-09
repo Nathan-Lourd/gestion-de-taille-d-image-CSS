@@ -7,7 +7,9 @@
 /* Section du haut */
 .haut {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .haut img {
@@ -26,14 +28,25 @@
  transition-delay: 0.15s;
  }
 
- @media only screen and (max-width: 1150px) {
+ @media only screen and (max-width: 550px) {
   .haut{
     justify-content: center;
     align-items: center;
-  flex-flow: column wrap; /*4*/}
+    flex-wrap: wrap;
+   /*4*/}
 }
 
 /* Ombre dans PNG */
+
+.test-ombre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3D9BEC; /*--https://www.css-gradient.com/*/
+background: -webkit-linear-gradient(bottom right, #3D9BEC, #AEA7CC);
+background: -moz-linear-gradient(bottom right, #3D9BEC, #AEA7CC);
+background: linear-gradient(to top left, #3D9BEC, #AEA7CC);
+}
 
 .test-ombre img {
   filter: drop-shadow(0 0 15px greenyellow);
